@@ -92,8 +92,8 @@ currentImages.forEach(src => {
   img.className = 'thumbnail';
 
   const randomDirection = directions[Math.floor(Math.random() * directions.length)];
-  const randomDelay = (Math.random() * 1.2).toFixed(2); // 0.00 ~ 0.50초 사이 랜덤
-  img.style.animation = `${randomDirection} 1.0s ease ${randomDelay}s forwards`;
+  const randomDelay = (Math.random() * 0.6).toFixed(2); // 0.00 ~ 1.00초 사이 랜덤
+  img.style.animation = `${randomDirection} 0.5s ease ${randomDelay}s forwards`;
 
   // ★ 애니메이션 종료 후 인라인 스타일 초기화 및 transition 재설정
 img.addEventListener('animationend', function() {

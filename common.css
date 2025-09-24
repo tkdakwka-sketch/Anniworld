@@ -1,7 +1,15 @@
 /* 스크롤바 스타일 */
-::-webkit-scrollbar { width: 8px; height: 8px; }
-::-webkit-scrollbar-track { background-color: #111111; }
-::-webkit-scrollbar-thumb { background-color: #11111100; border-radius: 3px; }
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background-color: #111;
+}
+::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 3px;
+}
 
 /* 전역 기본 설정 */
 html {
@@ -10,100 +18,94 @@ html {
 }
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #111111;
-  background-attachment: fixed;
+  background-color: #111;
   background-size: cover;
   margin: 0;
   padding: 0;
-  min-height: 100%;
-}
+ }
 
+/* 로고 */
 .logo {
-  position: fixed; /* 부모를 기준으로 절대 위치 지정 */
-  padding-top: 20px;
-  padding-left: 20px;
-  z-index: 1;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
 }
 .logo img {
-  width: 150px;              /* 원하는 크기로 축소 */
-  height: auto;              /* 비율 유지 */
-  object-fit: contain;       /* 이미지 전체 보이게 */
-  image-rendering: auto;     /* 부드럽게 렌더링 */
-  display: block;            /* 아래 여백 제거 */
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+  display: block;
 }
 
+/* 내비게이션 */
 nav {
-    position: fixed;
-    padding-top: 55px;
-    width: 100%;
-    text-align: center;
-    z-index: 999;
+  position: fixed;
+  top: 55px;
+  width: 100%;
+  text-align: center;
+  z-index: 999;
 }
-
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+nav ul li {
+  display: inline;
+  margin-right: 5px;
+}
 nav a {
   margin: 0 10px;
   text-decoration: none;
   color: #B76E79;
   font-size: clamp(12px, 1.5vw, 18px);
-  transition: all 0.5s ease;
-  }
-nav a:hover { 
-  color: #111111;
+  transition: color 0.5s ease;
 }
+nav a:hover,
 nav a:active {
-  color: #111111;
+  color: #111;
 }
-
-nav ul { list-style: none; padding: 0; margin: 0; }
-nav ul li { display: inline; margin-right: 5px; }
 
 /* 하단 */
 footer {
   font-weight: bold;
-  background-color: #111111;
+  background-color: #111;
   color: #4B0E1E;
   text-align: center;
-  padding: 25.5px;
+  padding: 25px;
   font-size: 15px;
   z-index: 999;
 }
 
-/* 모바일: 내비게이션 세로 스택, 여백 축소, 버튼 더 작게 */
+/* 반응형 */
 @media (max-width: 768px) {
-  /* 헤더의 레이아웃 자체는 그대로 두되, 내부가 줄바꿈되도록 허용 */
   header {
     flex-wrap: wrap;
     padding: 6px 0;
   }
-
-  /* 리스트 자체는 그대로 두고, 항목이 다음 줄로 자연스레 내려가도록 */
   nav ul {
-    display: block; /* li가 인라인이라도 줄바꿈 허용 */
+    display: block;
     text-align: center;
   }
-
   nav a {
     display: inline-block;
     margin: 6px 10px;
     font-size: 14px;
   }
-
   .logo {
     font-size: 22px;
   }
-
   footer {
     padding: 20px;
     font-size: 14px;
   }
 }
 
-/* 아주 작은 모바일: 텍스트 크기 최소화, 터치 영역 유지 */
 @media (max-width: 480px) {
   .logo {
     font-size: 20px;
   }
-
   nav a {
     margin: 5px 8px;
     font-size: 13px;

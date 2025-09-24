@@ -2,36 +2,45 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <!-- HTML head에 추가 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Site name -->
+  <title>AN.Design</title>
+    <!-- Add favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
   <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-    <title>AN.Design</title>
   <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="ect.css">
 </head>
 <body>
 
-    <!-- 상단 -->
-    <header>
-      <div class="logo"><img src="images/logo3.png" alt="로고"></div>
-      <nav>
-        <ul>
-          <li><a href="index.html">HOME</a></li>
-          <li><a href="our_work.html">OUR WORK</a></li>
-          <li><a href="ai_gallery.html">AI GALLERY</a></li>
-          <li><a href="contents.html">CONTENTS</a></li>
-          <li><a href="ETC.html">ETC</a></li>
-        </ul>
-      </nav>
-    </header>
+  <!-- Nav & logo -->
+  <header>
+    <div class="logo">
+      <img src="images/logo3.png" alt="로고">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="work.html">WORK FLOW</a></li>
+        <li><a href="gallery.html">AI GALLERY</a></li>
+        <li><a href="contents.html">CONTENTS</a></li>
+        <li><a href="ETC.html">ETC</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- 중앙 -->
-    <main>
-        
-    </main>
+   <!-- 여기에 각 페이지 콘텐츠가 AJAX로 로드됨 -->
+  <main id="content-area" role="main"></main>
+ 
+  <!-- 하단 -->
+  <footer>
+    <div class="footer-layer">© 2025 My Website. All rights reserved.</div>
+  </footer>
 
-    <!-- 하단 -->
-    <footer>
-    © 2025 My Website. All rights reserved.
-    </footer>
-
+  <!-- JS 로딩 -->
+  <script src="common.js" defer></script>
+  <script src="etc.js" defer></script>
 </body>
 </html>

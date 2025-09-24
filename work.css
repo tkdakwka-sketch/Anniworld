@@ -1,20 +1,30 @@
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-#fullpage {
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-}
-
-.section {
-  height: 100vh;
-  position: relative;
+/* 메인 영역 */
+.main {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #111111;
 }
+
+/* fullPage 섹션 */
+.section {
+  height: 100vh;               /* 화면 전체 높이 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 0px solid #111111; /* 모든 섹션에 동일한 하단 보더 */
+}
+
+/* 섹션 안의 이미지 */
+.section img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;           /* 비율 유지하면서 꽉 채우기 */
+}
+
+.section video {
+  width: 100%;
+  height: 100%;
+  object-fit: fill; 
+}
+

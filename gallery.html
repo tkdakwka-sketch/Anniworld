@@ -1,45 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- 중앙 -->
-    <main class="main-layout">
-      <!-- 왼쪽 영역: 필터, 메뉴 등 -->
-        <div class="left-panel">
-          <div class="left-content">
-            <h2 id="btn-all" class="active" data-category="all">AI Gallery</h2>
-            <ol id="gallery-menu">
-              <li data-category="realistic">AI Realism</li>
-              <li data-category="anime">AI Anime</li>
-              <li data-category="illustration">AI Illust</li>
-              <li data-category="td">AI 3D</li>
-              <li data-category="adult">AI Adult</li>
-            </ol>
-          </div>      
-        </div>
-            
-        <!-- 원하는 콘텐츠 추가 -->
-        <div class="center-panel">
-          <h1 class="title"></h1>
-          <div class="gallery-section">
-            <div id="gallery" class="gallery-grid">
-              <!-- 썸네일들이 여기에 들어감 -->
-            </div>
-          </div>
-        </div>
+  <!-- Site name -->
+  <title>AN.Design</title>
+    <!-- Add favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-          <!-- 모달 확대 영역 -->
-          <div id="modal" class="modal">
-          <span class="close">&times;</span>
-          <img class="modal-content" id="modal-img">
-          </div>
-        </div>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
 
-        <div class="right-panel">
-            <!-- 오른쪽 영역: 설명, 태그, 추천 콘텐츠 등 -->
-            <h2></h2>
-            <!-- 원하는 콘텐츠 추가 -->
-        </div>
+  <!-- Nav & logo -->
+  <header>
+    <div class="logo">
+      <img src="images/logo3.png" alt="로고">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="work.html">WORK FLOW</a></li>
+        <li><a href="gallery.html">AI GALLERY</a></li>
+        <li><a href="contents.html">CONTENTS</a></li>
+        <li><a href="ETC.html">ETC</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <!-- Top Buttun -->
-        <div class="scroll-top-btn">
-        <div id="top-btn"></div>
-        </div>
-      </main>
+<main class="main-layout">
+
+<!-- 왼쪽 영역: 필터, 메뉴 등 -->
+  <div class="left-panel">
+    <div class="left-content">
+      <h2 id="btn-all" class="active" data-category="all">AI Gallery</h2>
+      <ol id="gallery-menu">
+        <li data-category="realistic">AI Realism</li>
+        <li data-category="anime">AI Anime</li>
+        <li data-category="illustration">AI Illust</li>
+        <li data-category="td">AI 3D</li>
+        <li data-category="adult">AI Adult</li>
+      </ol>
+    </div>      
+  </div>
+      
+  <!-- 중간 영역, 이미지, 내용물 -->   <!-- 썸네일들이 여기에 들어감 -->
+  
+  <div class="center-panel">
+    <h1 class="title"></h1>
+    <div class="gallery-section">
+      <div id="gallery" class="gallery-grid">
+      </div>
+    </div>
+  </div>
+    <div class="right-panel">
+      <!-- 오른쪽 영역: 설명, 태그, 추천 콘텐츠 등 -->
+      <h2></h2>
+      <!-- 원하는 콘텐츠 추가 -->
+    </div>
+
+    <!-- 모달 확대 영역 -->
+    <div id="modal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-img">
+    </div>
+  </div>
+
+  <!-- Top Buttun -->
+  <div class="scroll-top-btn">
+  <div id="top-btn"></div>
+  </div>
+</main>
+ 
+  <!-- 하단 -->
+  <footer>
+    <div class="footer-layer">© 2025 My Website. All rights reserved.</div>
+  </footer>
+
+  <!-- JS 로딩 -->
+  <script src="common.js" defer></script>
+  <script src="gallery.js" defer></script>
+</body>
+</html>

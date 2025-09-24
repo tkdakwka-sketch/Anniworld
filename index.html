@@ -2,36 +2,61 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Site name -->
   <title>AN.Design</title>
+    <!-- Add favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
   <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
   <!-- Nav & logo -->
   <header>
-    <div class="logo"><img src="images/logo3.png" alt="로고"></div>
+    <div class="logo">
+      <img src="images/logo3.png" alt="로고">
+    </div>
     <nav>
       <ul>
-        <li><a href="main.html" data-page="main">HOME</a></li>
-        <li><a href="work.html" data-page="work">WORK FLOW</a></li>
-        <li><a href="gallery.html" data-page="gallery">AI GALLERY</a></li>
-        <li><a href="contents.html" data-page="contents">CONTENTS</a></li>
-        <li><a href="ETC.html" data-page="ETC">ETC</a></li>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="work.html">WORK FLOW</a></li>
+        <li><a href="gallery.html">AI GALLERY</a></li>
+        <li><a href="contents.html">CONTENTS</a></li>
+        <li><a href="ETC.html">ETC</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- 중앙 콘텐츠 영역 -->
-  <main id="content-area">
-    <!-- 여기에 각 페이지 콘텐츠가 AJAX로 로드됨 -->
-  </main>
-
+ <main>
+  <!--슬라이더 이미지-->
+  <div class="slider">
+    <div class="slides">
+      <img src="gallery/test/test6.png" alt="1">
+      <img src="gallery/test/test7.png" alt="2">
+      <img src="gallery/test/test8.png" alt="3">
+    </div>
+  </div>
+  <!--슬라이더 컨트롤-->
+    <div class="controls">
+      <div class="controls button">
+      <button id="prevBtn">&#x2B9C;</button>
+      <button id="pauseBtn">&#10074;&#10074;</button>
+      <button id="nextBtn">&#x2B9E;</button>
+      </div>
+    </div>
+</main>
+ 
   <!-- 하단 -->
   <footer>
     <div class="footer-layer">© 2025 My Website. All rights reserved.</div>
   </footer>
 
-  <script src="common.js"></script>
+  <!-- JS 로딩 -->
+  <script src="common.js" defer></script>
+  <script src="index.js" defer></script>
 </body>
 </html>
