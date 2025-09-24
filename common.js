@@ -4,9 +4,9 @@ function clearDynamicResources() {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-  const currentPath = location.pathname;
-  if (currentPath === '/' || currentPath.endsWith('index.html')) {
-    loadPage('main.html');
+  const currentPath = location.pathname.split('/').pop(); 
+  if (!currentPath || currentPath === 'index.html') {
+    loadPage('main.html'); // 기본 페이지
   } else {
     loadPage(currentPath);
   }
