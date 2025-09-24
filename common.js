@@ -95,5 +95,6 @@ document.querySelector('nav').addEventListener('click', function(e) {
 });
 
 window.addEventListener('popstate', () => {
-  loadPage(location.pathname);
+  const page = location.pathname.split('/').pop() || 'main.html';
+  loadPage(page);
 });
