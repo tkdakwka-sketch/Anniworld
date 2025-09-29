@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+}
+
+/* 스크롤 공간 확보 */
+.scene-wrapper {
+  height: 400vh; /* 이 높이만큼 스크롤하면서 .fashion-scene이 고정됨 */
+}
+
+
+
+.fashion-scene {
+  position: sticky;
+  top: 10vh;
+  width: 100%;
+  max-width: 1800px;
+  aspect-ratio: 21/9;
+  height: 80vh;
+  margin: 0 auto;
+  background: transparent; /* 확인용 */
+}
+
+.layer {
+  position: absolute;
+  inset: 0; left:0; /* top, right, bottom, left 전부 0 */
+  width: 100%;
+  height: 100;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.layer.sketch {
+  background: url('/ann_website/gallery/index/sketch.png') center/cover no-repeat;
+  z-index: 1;
+}
+
+.layer.photo {
+  background: url('/ann_website/gallery/index/photo.png') center/cover no-repeat;
+  z-index: 2;
+  clip-path: inset(100% 0 0 0); /* 처음엔 안 보이도록 clip-path를 0% 높이로 설정 */
+  transition: clip-path 0.3s ease-out;
+}
+
+.layer.body {
+  background: url('/ann_website/gallery/index/body.png') center/cover no-repeat;
+  z-index: 2;
+  clip-path: inset(100% 0 0 0); /* 처음엔 안 보이도록 clip-path를 0% 높이로 설정 */
+  transition: clip-path 0.3s ease-out;
+}
+
+.caption {
+  position: absolute;
+  top: 15%;
+  left: 62%;
+  opacity: 0;
+  color: #b76e79;
+  font-size: 25px;
+  font-weight: 300;
+  pointer-events: none;  
+  z-index: 4;
+}
+
+.scroll {
+    display: block;
+    position: fixed;
+    top: 83vh;
+    left: 50vw;
+    text-align: center;
+    z-index: 99;
+    animation-name: scrlDwnIndc;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes scrlDwnIndc {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(10px); }
+}

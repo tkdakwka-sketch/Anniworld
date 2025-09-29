@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Site name -->
+  <title>AN.Design</title>
+    <!-- Add favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/contents.css">
+</head>
+<body>
+
+  <!-- Nav & logo -->
+  <header>
+    <div class="logo">
+      <img src="images/logo4.png" alt="로고">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="transition-link">HOME</a></li>
+        <li><a href="works.html" class="transition-link">WORKFLOW</a></li>
+        <li><a href="gallery.html" class="transition-link">AI GALLERY</a></li>
+        <li><a href="temp.html" class="transition-link">TEMPLATE</a></li>
+        <li><a href="contents.html"class="transition-link">MUSIC</a></li>
+      </ul>
+    </nav>
+  </header>
+ 
+  <div class="fade-area">
+  <main class="main">
+      <!-- Swiper 섹션  -->
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" data-audio="music/audio/track1.mp3">
+            <img src="music/image/title1.png" alt=" ">
+            <p class="track-title">Track 1</p>
+          </div>
+          <div class="swiper-slide" data-audio="music/audio/track2.mp3">
+            <img src="music/image/title2.png" alt=" ">
+            <p class="track-title">Track 2</p>
+          </div>
+          <div class="swiper-slide" data-audio="music/audio/track3.mp3">
+            <img src="music/image/title3.png" alt=" ">
+            <p class="track-title">Track 3</p>
+          </div>
+          <div class="swiper-slide" data-audio="music/audio/track4.mp3">
+            <img src="music/image/title4.png" alt=" ">
+            <p class="track-title">Track 4</p>
+          </div>
+          <div class="swiper-slide" data-audio="music/audio/track5.mp3">
+            <img src="music/image/title5.png" alt=" ">
+            <p class="track-title">Track 5</p>
+          </div>
+          <div class="swiper-slide" data-audio="music/audio/track6.mp3">
+            <img src="music/image/title6.png" alt=" ">
+            <p class="track-title">Track 6</p>
+          </div>
+          <div class="swiper-slide" data-audio="music/audio/track7.mp3">
+            <img src="music/image/title7.png" alt=" ">
+            <p class="track-title">Track 7</p>
+          </div>
+          <div class="swiper-slide" data-audio="music/audio/track8.mp3">
+            <img src="music/image/title8.png" alt=" ">
+            <p class="track-title">Track 8</p>
+          </div>
+          <div class="swiper-slide" data-audio="music/audio/track9.mp3">
+            <img src="music/image/title9.png" alt=" ">
+            <p class="track-title">Track 9</p>
+          </div>
+          <div class="swiper-slide" data-audio="music/audio/track10.mp3">
+            <img src="music/image/title10.png" alt=" ">
+            <p class="track-title">Track 10</p>
+          </div>
+        </div>
+      </div>
+      <div class="audio-player">
+        <button id="playPauseBtn">❚❚</button>
+        <input type="range" id="progressBar" value="0">
+        <span id="trackTitle"></span>
+      </div>
+      <audio id="audioPlayer"></audio>
+  </main>  
+
+  <!-- 하단 -->
+  <footer>
+    <div class="footer-layer">© 2025 My Website. All rights reserved.</div>
+  </footer>  
+  </div>
+
+  <!-- JS 로딩 -->
+  <script src="js/common.js" defer></script>
+  <script src="js/swiper-bundle.min.js" defer></script>
+  <script src="js/contents.js" defer></script>
+</body>
+</html>

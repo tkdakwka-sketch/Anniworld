@@ -1,0 +1,83 @@
+.main {
+  width: 100vw;
+  height: 80vh;
+  background-color: #4B0E1E;
+}
+
+.swiper-slide {
+  aspect-ratio: 1 / 1;
+  width: auto;
+  height: 70vh;
+  background: #00000000;
+  border-radius: 3%;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.0);
+  cursor: pointer;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-top: 0;
+  border-bottom: 1px solid #444;
+}
+
+.swiper-slide img {
+  transition: transform 0.3s ease;
+}
+
+.swiper-slide img:hover {
+  transform: scale(1.1);
+  z-index: 10;
+}
+
+.track-title {
+  color: #fff;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.swiper-container {
+  padding: 30px 0;
+}
+
+/* 컨트롤러*/
+
+.audio-player {
+  position: fixed;
+  bottom: 12vh;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 1000;
+}
+
+
+/* ▶ / ⏸ 버튼 원하는 색상으로 변경 가능 로즈골드: #b76e79 핫핑크: ff4081 연핑크:ff79c6 */
+#playPauseBtn {
+  position: fixed;
+  transform: translatex(-50px);
+  width: 50px;
+  height: 35px;
+  border: 3px solid transparent;
+  background: #13131300;
+  color: #B76E79;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
+#playPauseBtn:hover {
+  position: fixed;
+  color: #7a4951; /* hover 시 색상 변경 */
+}
+
+/* 볼륨 슬라이더 */
+#progressBar {
+  accent-color: #b76e79; /* 원하는 색상으로 변경 */
+}

@@ -1,0 +1,180 @@
+/*헤더 배경*/
+header{
+  background-color: #00000000;
+  background-size: cover;
+}
+
+/* 메인 영역 */
+main {
+  flex: 1;
+  position: relative;
+  display:flex;
+  flex-direction: column; /* 세로 정렬 */
+  justify-content: center;
+  align-items: center;
+  background-color: #00000000; /* 가장 아래 컬러 */
+  height: 80vh; /* 높이 */
+}
+
+/* 슬라이더 */
+.slider {
+  position: relative;
+  width: 1100px;
+  height: auto;
+  overflow: hidden;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* top, right, bottom, left 전부 0 */
+  background: url('../gallery/works/works-bg.png') no-repeat center;
+  background-size: auto; /* 원본 크기 유지 */
+  z-index: 2; /* 이미지 위로 올라옴 */
+  pointer-events: none; /* 클릭 막지 않게 */
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slides img {
+  flex: 0 0 100%;
+  width: 100%;
+  height: auto;
+  object-fit: none;
+  position: relative;
+  z-index: 1; /* 배경보다 아래 */
+}
+
+
+/* 컨트롤 버튼 */
+.controls {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.controls button {
+  width: 50px;
+  height: 35px;
+  border: 3px solid transparent;
+  background: #13131300;
+  color: #B76E79;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+.controls button:focus {
+  outline: none;
+}
+
+.controls button:active {
+  border: 3px solid transparent;
+}
+
+.controls button:hover {
+  background: #00000000;
+}
+
+
+/* 넓은 태블릿 이하: 내비게이션 간격과 슬라이더 폭 유연화 */
+@media (max-width: 1200px) {
+  /* 헤더 내용이 겹치지 않도록 항목 간격만 미세 조정 */
+  nav a {
+    margin: 0 14px;
+  }
+
+  .slider {
+    width: 88%;
+  }
+}
+
+/* 태블릿 이하: 메뉴 줄바꿈 허용, 메인 높이 유동화 */
+@media (max-width: 992px) {
+  nav a {
+    margin: 0 12px;
+    font-size: 14px;
+  }
+
+  /* 고정 헤더 아래 공간 확보가 필요하면 주석 해제
+  body { padding-top: 48px; } 
+  */
+
+  /* 메인 영역이 너무 꽉 차지 않게 높이를 자동으로 */
+  main {
+    height: auto;
+    min-height: 86vh;
+    padding: 10px 0;
+  }
+
+  .slider {
+    width: 92%;
+    max-width: 900px;
+    height: auto; /* 이미지 비율 유지 위해 자동 높이로 전환 */
+  }
+
+  .slides {
+    height: auto;
+  }
+
+  .slides img {
+    height: auto; /* 작은 화면에서는 세로 비율 유지 */
+    object-fit: cover;
+  }
+
+  .controls {
+    bottom: 10px;
+    gap: 8px;
+  }
+
+  .controls button {
+    width: 36px;
+    height: 28px;
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+}
+
+/* 모바일: 내비게이션 세로 스택, 여백 축소, 버튼 더 작게 */
+@media (max-width: 768px) {
+    main {
+    padding: 8px 0 12px;
+  }
+
+  .slider {
+    width: 96%;
+  }
+
+  .controls {
+    bottom: 8px;
+    gap: 6px;
+  }
+
+  .controls button {
+    width: 32px;
+    height: 26px;
+    font-size: 11px;
+    padding: 5px 8px;
+  }
+}
+
+/* 아주 작은 모바일: 텍스트 크기 최소화, 터치 영역 유지 */
+@media (max-width: 480px) {
+    body {
+    font-size: 14px;
+  }
+   .controls button {
+    width: 30px;
+    height: 25px;
+    font-size: 11px;
+    padding: 4px 6px;
+  }
+}
