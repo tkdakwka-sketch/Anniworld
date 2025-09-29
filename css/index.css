@@ -31,19 +31,19 @@ body {
 }
 
 .layer.sketch {
-  background: url('/ann_website/gallery/index/sketch.png') center/cover no-repeat;
+  background: url('../gallery/index/sketch.png') center/cover no-repeat;
   z-index: 1;
 }
 
 .layer.photo {
-  background: url('/ann_website/gallery/index/photo.png') center/cover no-repeat;
+  background: url('../gallery/index/photo.png') center/cover no-repeat;
   z-index: 2;
   clip-path: inset(100% 0 0 0); /* 처음엔 안 보이도록 clip-path를 0% 높이로 설정 */
   transition: clip-path 0.3s ease-out;
 }
 
 .layer.body {
-  background: url('/ann_website/gallery/index/body.png') center/cover no-repeat;
+  background: url('../gallery/index/body.png') center/cover no-repeat;
   z-index: 2;
   clip-path: inset(100% 0 0 0); /* 처음엔 안 보이도록 clip-path를 0% 높이로 설정 */
   transition: clip-path 0.3s ease-out;
