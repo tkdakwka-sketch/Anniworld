@@ -110,14 +110,14 @@ footer::before {
   position: fixed;
   top: 0;
   left: 0;
-  height: 10vh;
-  padding: 2vh 1vw; /* 여백 조절 */
+  height: 8vh;
+  padding: 1vh 1vw; /* 여백 조절 */
   z-index: 1000;
 }
 
 .logo img {
   width: auto;
-  max-height: 70%;
+  height: 100%;
   object-fit: contain;
   display: block;
 }
@@ -126,7 +126,7 @@ footer::before {
 nav {
   position: fixed;
   top: 4%;
-  height: 10vh;
+  height: 3vh;
   z-index: 999;
 }
 nav ul {
@@ -159,7 +159,7 @@ nav a:active {
 /* 반응형 */
 @media (max-width: 768px) {
   header {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     padding: 6px 0;
   }
   nav ul {
@@ -171,21 +171,71 @@ nav a:active {
     margin: 6px 10px;
     font-size: 14px;
   }
-  .logo image{
-    font-size: 22px;
+  .logo {
+    position: fixed;
+    display:flex;
+    justify-content: center;    /* 가로(메인축) 중앙 정렬 */
+    align-items: center;        /* 세로(교차축) 중앙 정렬 */
+    top: 0;
+    left: 0;    
+    padding: 1vh 1vw;
+    z-index: 1000;
   }
+  .logo img {
+  width: auto;
+  max-height: 80%;
+  object-fit: contain;
+  display: block;
+  }
+
   footer {
-    padding: 20px;
+    height: 8vh;
+    padding: 6px 0;
     font-size: 14px;
   }
 }
 
 @media (max-width: 480px) {
+  header {
+    flex-wrap: nowrap;
+    padding: 6px 0;
+  }
   .logo {
-    font-size: 20px;
+    position: fixed;
+    display:flex;
+    justify-content: center;    /* 가로(메인축) 중앙 정렬 */
+    align-items: center;        /* 세로(교차축) 중앙 정렬 */
+    top: 0;
+    left: 0;    
+    padding: 1vh 1vw;
+    z-index: 1000;
+  }
+    .logo img {
+    width: auto;
+    max-height: 60%;
+    margin-left:10px;
+    object-fit: contain;
+    display: block;
+  }
+  header {
+    flex-wrap: wrap;
+    padding: 6px 0;
+  }
+  nav ul {
+    display: block;
+    text-align: center;
+    margin-left:50px;
   }
   nav a {
-    margin: 5px 8px;
-    font-size: 13px;
+    display: inline-block;
+    margin: 0px 0px;
+    font-size: 10px;
+  }
+    footer {
+    padding: 20px;
+    font-size: 10px;
+  }
+  footer {  
+  height: 3vh; /* 높이 */
   }
 }
