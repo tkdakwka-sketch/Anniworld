@@ -108,10 +108,11 @@ footer::before {
 /*로고*/ 
 .logo {
   position: fixed;
-  top: 0;
-  left: 0;
-  height: 8vh;
-  padding: 1vh 1vw; /* 여백 조절 */
+  display:flex;
+  top: 2vh;
+  left: 1vw;
+  width: auto;
+  height: 90px;
   z-index: 1000;
 }
 
