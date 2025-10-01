@@ -112,7 +112,7 @@ footer::before {
   top: 2vh;
   left: 1vw;
   width: auto;
-  height: 90px;
+  height: 75px;
   z-index: 1000;
 }
 
