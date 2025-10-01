@@ -1,13 +1,4 @@
 @charset "UTF-8";
-/*로고*/
-.logo img {
-  width: auto;
-  max-height: 7vh !important;
-  -o-object-fit: contain;
-     object-fit: contain;
-  display: block;
-}
-
 /*기본 리셋*/
 * {
   margin: 0;
