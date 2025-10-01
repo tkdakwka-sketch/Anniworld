@@ -33,9 +33,8 @@
 }
 
 /*첫 번째 섹션 - 슬라이더*/
-.section:first-child {
-  /*스와이퍼 네비게이션 스타일*/
-}
+/*.section:first-child {
+}*/
 .section:first-child .swiper {
   width: 100%;
   height: 100%;
