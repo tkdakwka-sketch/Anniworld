@@ -77,3 +77,137 @@ body {
   0%, 100% { transform: translateX(-50%) translateY(0); }
   50% { transform: translateX(-50%) translateY(10px); }
 }
+
+/* 반응형 */
+  @media (max-width: 768px) {
+    .fashion-scene {
+    position: sticky;
+    top: 10vh;
+    width: 100%;
+    max-width: 1000px;
+    aspect-ratio: 21/9;
+    height: 80vh;
+    margin: 0 auto;
+    background: transparent; /* 확인용 */
+  }
+
+  .layer {
+    position: absolute;
+    inset: 0; left:0; /* top, right, bottom, left 전부 0 */
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+    .layer.sketch {
+    background: url('../gallery/index/sketch.png') center/contain no-repeat;
+    z-index: 1;
+  }
+
+  .layer.photo {
+    background: url('../gallery/index/photo.png') center/contain no-repeat;
+    z-index: 2;
+    clip-path: inset(100% 0 0 0); /* 처음엔 안 보이도록 clip-path를 0% 높이로 설정 */
+    transition: clip-path 0.3s ease-out;
+  }
+
+  .layer.body {
+    background: url('../gallery/index/body.png') center/contain no-repeat;
+    z-index: 2;
+    clip-path: inset(100% 0 0 0); /* 처음엔 안 보이도록 clip-path를 0% 높이로 설정 */
+    transition: clip-path 0.3s ease-out;
+  }
+    .caption {
+    position: absolute;
+    top: 35%;
+    left: 62%;
+    opacity: 0;
+    color: #b76e79;
+    font-size: 12px;
+    font-weight: 300;
+    pointer-events: none;  
+    z-index: 4;
+}
+}
+
+@media (max-width: 480px) {
+     .fashion-scene {
+    position: sticky;
+    top: 10vh;
+    width: 100%;
+    max-width: 750px;
+    aspect-ratio: 21/9;
+    height: 80vh;
+    margin: 0 auto;
+    background: transparent; /* 확인용 */
+  }
+
+  .layer {
+    position: absolute;
+    inset: 0; left:0; /* top, right, bottom, left 전부 0 */
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+    .layer.sketch {
+    background: url('../gallery/index/sketch.png') center/contain no-repeat;
+    z-index: 1;
+  }
+
+  .layer.photo {
+    background: url('../gallery/index/photo.png') center/contain no-repeat;
+    z-index: 2;
+    clip-path: inset(100% 0 0 0); /* 처음엔 안 보이도록 clip-path를 0% 높이로 설정 */
+    transition: clip-path 0.3s ease-out;
+  }
+
+  .layer.body {
+    background: url('../gallery/index/body.png') center/contain no-repeat;
+    z-index: 2;
+    clip-path: inset(100% 0 0 0); /* 처음엔 안 보이도록 clip-path를 0% 높이로 설정 */
+    transition: clip-path 0.3s ease-out;
+  }
+}
+ @media (max-width: 768px) {
+    .fashion-scene {
+    position: sticky;
+    top: 10vh;
+    width: 100%;
+    max-width: 750px;
+    aspect-ratio: 21/9;
+    height: 80vh;
+    margin: 0 auto;
+    background: transparent; /* 확인용 */
+  }
+
+  .layer {
+    position: absolute;
+    inset: 0; left:0; /* top, right, bottom, left 전부 0 */
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+    .layer.sketch {
+    background: url('../gallery/index/sketch.png') center/contain no-repeat;
+    z-index: 1;
+  }
+
+  .layer.photo {
+    background: url('../gallery/index/photo.png') center/contain no-repeat;
+    z-index: 2;
+    clip-path: inset(100% 0 0 0); /* 처음엔 안 보이도록 clip-path를 0% 높이로 설정 */
+    transition: clip-path 0.3s ease-out;
+  }
+
+  .layer.body {
+    background: url('../gallery/index/body.png') center/contain no-repeat;
+    z-index: 2;
+    clip-path: inset(100% 0 0 0); /* 처음엔 안 보이도록 clip-path를 0% 높이로 설정 */
+    transition: clip-path 0.3s ease-out;
+  }
+}
